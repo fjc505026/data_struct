@@ -60,7 +60,7 @@ int locate_sll_elem(Linklist list, ElemType *data, void (*compare)());
  * @param index the index/position of the list needs to be inserted
  * @param data  the data need to be inserted
  */
-void ListInssll_insertert(Linklist list, int index, ElemType *data);
+bool sll_insert(register LNode **listp, int index, ElemType *data);
 
 /* Prerequisties: list already exists
  * @param list the list to be manipulated with
