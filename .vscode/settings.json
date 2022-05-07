@@ -1,0 +1,24 @@
+{
+  "editor.rulers": [
+      80,
+      120
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "C_Cpp.clang_format_path": "xaver.clang-format",
+  "editor.defaultFormatter": "xaver.clang-format",
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "none",
+  "C_Cpp.default.intelliSenseMode": "gcc-arm",
+  "files.associations": {
+    "stdbool.h": "c",
+    "sll_ex.h": "c",
+    "sll.h": "c"
+  },
+  // "cortex-debug.armToolchainPath": "/usr/local/mcuxpressoide/ide/tools/bin",
+  // "cortex-debug.JLinkGDBServerPath": "/opt/SEGGER/JLink/JLinkGDBServer"
+}
