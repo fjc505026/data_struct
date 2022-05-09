@@ -1,18 +1,24 @@
+
+
+SRC_FILES := $(wildcard ./list/src/*.c)
+OBJ_FILES := $(patsubst %.c,%.o,$(SRC_FILES))
+SRCPATH := ./list/src
+INCPATH := ./list/include
+DEFINES := 
+
+
 TARGET= examples
-CFLAGS = -fdiagnostics-color=always -g
-C_FILES = $(shell ls *.c)  #get all .c file in current DIR
-BASE = $(basename $(C_FILES))  #get file name without .c
-OBJS = $(addsuffix .o, $(addprefix obj/,$(BASE))) #covert to obj/*.o, all object file put in obj/ 
+CFLAGS = -fdiagnostics-color=always -g -I$(INCPATH)
 
-
-$(TARGET):$(OBJS)
+$(TARGET):main.c $(OBJ_FILES)
 	-rm -f $@
-	gcc -o $(TARGET) $(OBJS)
+	gcc  $(CFLAGS) -o $(TARGET) main.c $(OBJ_FILES) 
 
-obj/%.o:%.c
-	@if test ! -d"obj"; then mkdir -p obj; fi;
+%.o:$(SRCPATH)%.c
 	gcc -c $(CFLAGS) -o $@ $<
 
+.PHONY:clean
+
 clean:
-	-rm -f $(TARGET)
-	-rm -f obj/*.o
+	-rm -f $(TARGET) $(OBJ_FILES)
+
