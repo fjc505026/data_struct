@@ -17,7 +17,7 @@ typedef struct LNode {
 } LNode, *Linklist;
 */
 
-// @brief create a new empty linked list without head node
+// @brief create a new empty linked list with head node
 bool init_sll_ex(Linklist *list);
 
 // all functions below have the prerequistie of the exsiting list

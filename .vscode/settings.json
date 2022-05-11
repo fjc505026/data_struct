@@ -17,7 +17,8 @@
   "files.associations": {
     "stdbool.h": "c",
     "sll_ex.h": "c",
-    "sll.h": "c"
+    "sll.h": "c",
+    "dll.h": "c"
   },
   // "cortex-debug.armToolchainPath": "/usr/local/mcuxpressoide/ide/tools/bin",
   // "cortex-debug.JLinkGDBServerPath": "/opt/SEGGER/JLink/JLinkGDBServer"
