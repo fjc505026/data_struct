@@ -1,9 +1,9 @@
 
 
-SRC_FILES := $(wildcard ./list/src/*.c)
+SRCPATH := ./stack/src
+INCPATH := ./stack/include
+SRC_FILES := $(wildcard ./stack/src/*.c)
 OBJ_FILES := $(patsubst %.c,%.o,$(SRC_FILES))
-SRCPATH := ./list/src
-INCPATH := ./list/include
 DEFINES := 
 
 
