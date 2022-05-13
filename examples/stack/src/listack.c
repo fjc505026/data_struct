@@ -21,7 +21,7 @@ bool listack_push(listack *s, int data) {
 
   new_node->next = (*s)->next;
   (*s)->next = new_node;
-
+  printf("%c has been pushed\r\n", data);
   return true;
 }
 
@@ -33,7 +33,7 @@ bool listack_pop(listack *s, int *data) {
   listack_node *del_node = (*s)->next;
   *data = del_node->data;
   (*s)->next = del_node->next;
-
+  printf("%c has been poped\r\n", (char)*data);
   free(del_node);
   return true;
 }
@@ -45,6 +45,21 @@ bool listack_get_top(listack *s, int *data) {
   *data = (*s)->next->data;
 
   return true;
+}
+
+void show_stack_content(listack s) {
+  if (!s || !(s->next)) {
+    return;
+  }
+  int index = 1;
+  while ((s = s->next)) {
+    if (index == 1) {
+      printf("[TOP]%d ", s->data);
+    } else {
+      printf("[%d]%d ", index++, s->data);
+    }
+  }
+  printf("\r\n");
 }
 
 // without head node version

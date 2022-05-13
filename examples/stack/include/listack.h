@@ -21,6 +21,8 @@ bool listack_pop(listack *s, int *data);
 
 bool listack_get_top(listack *s, int *data);
 
+void show_stack_content(listack s);
+
 // without head node version
 void init_listack1(listack *s);
 
