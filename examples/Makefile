@@ -10,9 +10,9 @@ DEFINES :=
 TARGET= examples
 CFLAGS = -fdiagnostics-color=always -g -I$(INCPATH) 
 
-$(TARGET):main.c $(OBJ_FILES)
+$(TARGET):main.c stack_app.c stack_app.h $(OBJ_FILES)
 	-rm -f $@
-	gcc  $(CFLAGS) -o $(TARGET) main.c $(OBJ_FILES) -lm
+	gcc  $(CFLAGS) -o $(TARGET) main.c stack_app.c $(OBJ_FILES) -lm
 
 %.o:$(SRCPATH)%.c
 	gcc -c $(CFLAGS) -o $@ $<

@@ -18,7 +18,8 @@
     "stdbool.h": "c",
     "sll_ex.h": "c",
     "sll.h": "c",
-    "dll.h": "c"
+    "dll.h": "c",
+    "listack.h": "c"
   },
   // "cortex-debug.armToolchainPath": "/usr/local/mcuxpressoide/ide/tools/bin",
   // "cortex-debug.JLinkGDBServerPath": "/opt/SEGGER/JLink/JLinkGDBServer"
